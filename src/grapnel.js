@@ -155,6 +155,8 @@
                 });
                 // Call handler
                 handler.call(self, req, event);
+            } else {
+                self.trigger('miss', event);
             }
             // Returns self
             return self;
